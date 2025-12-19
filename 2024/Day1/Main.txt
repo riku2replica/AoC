@@ -1,0 +1,28 @@
+
+# your code goes here
+f = open("Sample.txt","r")
+
+x = []
+y = []
+sum = 0
+
+for b in a:
+	c = b.split(' ')
+	x.append(int(c[0]))
+	y.append(int(c[1]))
+
+curRec = 0
+maxTtl = 0
+bQuit = False
+if len(x) == len(y):
+	maxTtl = len(x)
+	while bQuit == False:
+		if x[curRec] > y[curRec]:
+			sum += (x[curRec] - y[curRec])
+		else:
+			sum += (y[curRec] - x[curRec])
+		
+		if curRec < maxTtl:
+			curRec += 1
+		else:
+			bQuit = True

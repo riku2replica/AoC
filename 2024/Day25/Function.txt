@@ -1,0 +1,26 @@
+# your code goes here
+str1 = "0,5,3,4,3,6"
+str2 = "5,0,2,1,3,6"
+str3 = "3,0,2,0,1,6"
+aS1 = []
+aS2 = []
+aS3 = []
+
+aS1 = str1.split(',')
+aS2 = str2.split(',')
+aS3 = str3.split(',')
+
+maxS = 0
+bCompatible = True
+#print(len(aS1))
+maxS = len(aS1) - 1
+for x in range(maxS):
+	#print(x)
+	#print(aS1[x])
+	if (int(aS1[x]) + int(aS2[x])) > maxS:
+		if bCompatible == True:
+			bCompatible = False
+	else:
+		print(x)
+		
+print(bCompatible)
